@@ -1,0 +1,151 @@
+.header {
+  background-color: transparent;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.headerContent {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logoSubtext {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.navigation {
+  display: none;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
+}
+
+.navItem {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+.navItem > span {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.navItem::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 0.125rem;
+
+  transform: scaleX(0);
+  background-color: currentColor;
+  transition: all 0.3s ease-out;
+  will-change: transform;
+}
+
+.navItem::after {
+  content: attr(data-text);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(28px);
+  padding: 0 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition-duration: 0.3s;
+  will-change: transform, opacity;
+}
+
+.mobileMenuButton {
+  color: #374151;
+  transition: color 0.15s ease-in-out;
+}
+
+.mobileMenuButton:hover,
+.mobileMenuButton:focus {
+  color: #111827;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+.menuIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.navItem:hover::before {
+  transform: scaleX(1);
+}
+
+.navItem:hover::after {
+  transform: translateY(8px);
+  opacity: 1;
+}
+
+.navItem:hover > span {
+  transform: translateY(-16px);
+  opacity: 0;
+}

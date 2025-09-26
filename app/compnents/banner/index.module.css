@@ -1,0 +1,41 @@
+.videoContainer {
+  transform: matrix3d(
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    var(--main-banner-position),
+    0,
+    1
+  );
+}
+
+.mainBanner {
+  transform: matrix3d(
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    var(--main-banner-position, 0),
+    0,
+    1
+  );
+}

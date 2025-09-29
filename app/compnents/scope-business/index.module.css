@@ -1,0 +1,236 @@
+.container {
+  height: auto;
+  min-height: 150vh;
+  width: 100%;
+  background-color: var(--container-color, white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 14rem 8rem;
+  transform: translateY(var(--container-position, 0vh));
+  box-sizing: border-box;
+}
+
+/* 标题部分 */
+.titleSection {
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+  margin-bottom: 1rem;
+
+  animation-range: entry 0% cover 100%;
+}
+
+.titleLine {
+  width: 60px;
+  height: 2px;
+  background-color: black;
+}
+
+/* 业务网格 */
+.businessGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4rem 6rem;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 4rem;
+}
+
+.businessItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.itemNumber {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.itemTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.itemDescription {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* 详情按钮 */
+.detailSection {
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+
+.detailButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.detailButton:hover {
+  opacity: 0.7;
+}
+
+.buttonIcon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.detailButton:hover .buttonIcon {
+  transform: translateX(4px);
+}
+
+/* 案例展示部分 */
+.showcaseSection {
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.showcaseTitleSection {
+  margin-bottom: 4rem;
+}
+
+.showcaseTitle {
+  font-size: 2rem;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.showcaseTitleLine {
+  width: 60px;
+  height: 2px;
+  background-color: black;
+}
+
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.showcaseItem {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.showcaseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.showcaseText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  color: white;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.showcaseText h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.showcaseText p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* 鼠标悬停效果 */
+.showcaseItem:hover .imageContainer {
+  clip-path: inset(32px 54px 32px 54px);
+}
+
+.showcaseItem:hover .showcaseImage {
+  transform: scale(1.2, 1.2);
+}
+
+.showcaseItem:hover .showcaseText {
+  transform: translateY(0);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .showcaseGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .businessGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .showcaseGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .title,
+  .showcaseTitle {
+    font-size: 1.5rem;
+  }
+
+  .itemTitle {
+    font-size: 1.25rem;
+  }
+}

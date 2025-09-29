@@ -5,6 +5,7 @@ import gsap from "gsap";
 import styles from "./index.module.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { remInit } from "@/app/utils/rem";
+import ImagesShowcase from "../images-showcase";
 
 gsap.registerPlugin(ScrollTrigger);
 const index = () => {
@@ -21,12 +22,12 @@ const index = () => {
     const ctx1 = gsap.context(() => {
       gsap.to([mainRef.current], {
         css: {
-          "--main-banner-position": "600", // 更明确的计算
-          "--main-position": "-600",
+          "--main-banner-position": "700",
+          "--main-position": "-700",
         },
         ease: "none",
         scrollTrigger: {
-          trigger: mainRef.current, // 哪个区域触发滚动动画
+          trigger: mainRef.current,
           start: "top top",
           end: "bottom top",
           pin: true,
@@ -59,10 +60,41 @@ const index = () => {
         },
       );
     });
+    const ctx3 = gsap.context(() => {
+      gsap.to([".aaaContainer"], {
+        css: {
+          "--container-color": "black",
+        },
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".aaaContainer",
+          start: "top top",
+          end: "center top",
+          scrub: true,
+        },
+      });
+    });
+    const ctx4 = gsap.context(() => {
+      gsap.to([".aaaContainer"], {
+        css: {
+          "--container-position": "100vh",
+          "--footer-position": "-100vh",
+        },
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".aaaContainer",
+          start: "bottom bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    });
 
     return () => {
       ctx1.revert();
       ctx2.revert();
+      ctx3.revert();
+      ctx4.revert();
     };
   }, []);
   return (
@@ -82,7 +114,7 @@ const index = () => {
             data-scroll-target="#main-banner"
             className={
               styles.mainBanner +
-              " absolute top-0 left-0 z-2 flex h-screen w-screen translate-x-[10rem] translate-y-[-4rem] flex-col justify-center text-[8rem]"
+              " w-[full - 10rems] absolute top-0 left-0 z-2 flex h-screen translate-x-[10rem] translate-y-[-4rem] flex-col justify-center text-[8rem]"
             }
             id="display-text"
             data-scroll-repeat=""
@@ -147,7 +179,6 @@ const index = () => {
             </video>
           </div>
         </section>
-        <div className="h-screen">a</div>
       </main>
     </div>
   );

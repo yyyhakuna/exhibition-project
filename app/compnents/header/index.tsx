@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { useGSAP } from "@gsap/react";
-
 import styles from "./index.module.css";
 
 const Header = () => {

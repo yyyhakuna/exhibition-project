@@ -1,0 +1,161 @@
+.footer-container {
+  background-color: #f5f5f5;
+  height: 100vh;
+  width: 100%;
+  transform: translateY(var(--footer-position, 0vh));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.footerContent {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+/* 主标题部分 */
+.titleSection {
+  text-align: left;
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #333;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.subTitle {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #333;
+  margin: 0 0 3rem 0;
+  line-height: 1.2;
+}
+
+/* 联系按钮 */
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #333;
+  color: white;
+}
+
+.buttonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  transition: all 0.3s ease;
+}
+
+/* 邮件订阅部分 */
+.newsletterSection {
+  max-width: 600px;
+}
+
+.newsletterHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.newsletterLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.newsletterLabelChinese {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.subscribeForm {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.emailInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  color: #999;
+  padding: 0.5rem 0;
+}
+
+.emailInput::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.subscribeButton {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.subscribeButton:hover {
+  color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .footerContent {
+    gap: 4rem;
+    padding: 0 1rem;
+  }
+
+  .mainTitle,
+  .subTitle {
+    font-size: 2.5rem;
+  }
+
+  .contactButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .subscribeForm {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .emailInput {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+  }
+}

@@ -23,7 +23,3 @@ export const remInit = () => {
   window.addEventListener("pageshow", rem);
   window.addEventListener("resize", rem);
 };
-
-if (typeof window !== "undefined") {
-  remInit();
-}

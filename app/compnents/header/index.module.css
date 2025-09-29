@@ -42,7 +42,7 @@
 }
 
 .logoText {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #fff;
 }
@@ -68,7 +68,7 @@
   cursor: pointer;
   overflow: hidden;
   padding: 0.5rem 0.75rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   /* font-weight: 500; */
   color: #fff;
   transition-timing-function: ease-in-out;

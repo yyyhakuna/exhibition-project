@@ -10,9 +10,9 @@ const Header = () => {
           <div className={styles.logo}>
             <Link href="/" className={styles.logoLink}>
               <div className={styles.logoText}>
-                <span>Mason</span>
-                <br />
-                <span className={styles.logoSubtext}>Events</span>
+                <span>kundevelopmentmgt</span>
+                {/* <br />
+                <span className={styles.logoSubtext}>Events</span> */}
               </div>
             </Link>
           </div>
@@ -24,32 +24,20 @@ const Header = () => {
                 className={`${styles.navItem} navItem nav-item`}
                 data-text="业务范围"
               >
-                <span>业务范围</span>
+                <span>About us</span>
               </div>
             </div>
             <div
               className={`${styles.navItem} navItem nav-item`}
               data-text="案例展示"
             >
-              <span>案例展示</span>
+              <span>Products and Service</span>
             </div>
             <div
               className={`${styles.navItem} navItem nav-item`}
               data-text="行业动态"
             >
-              <span>行业动态</span>
-            </div>
-            <div
-              className={`${styles.navItem} navItem nav-item`}
-              data-text="关于梅森"
-            >
-              <span>关于梅森</span>
-            </div>
-            <div
-              className={`${styles.navItem} navItem nav-item`}
-              data-text="联系我们"
-            >
-              <span>联系我们</span>
+              <span>Contact us</span>
             </div>
           </nav>
 

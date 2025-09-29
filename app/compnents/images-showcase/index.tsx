@@ -57,12 +57,12 @@ const ImagesShowcase = () => {
   }, []);
 
   return (
-    <section className="mt-[-50rem]">
+    <section className="mt-[-25%]">
       <div className="mx-[10rem] mb-[10rem] text-4xl text-black">
-        关于我们 英国梅森会展管理有限公司（Mason Events Management
-        Limited）是一家充满活力、极富创新、踏实务实的国际会展管理及海外品牌活动策划公司。梅森总部设立于英国伦敦，覆盖欧洲，通过国际会展、活动策划、海外数字营销及特色定制四大核心业务方式，为更多的中国企业出海及落地提供专业的知识和服务。
-        自2013年创立伊始，英国梅森参与组织世界著名展会并举办知名品牌发布会数百场，为全球超过300家企业提供过专业的会展及品牌活动策划服务，范围覆盖英国、德国、澳大利亚等20多个国家，涉及旅游、机械零部件、信息与通信、设计与艺术、酒类和食品等行业。
-        英国梅森团队深谙中西文化，秉承不断开拓的全球化精神，力求帮助更多优秀的中国出海品牌实现海外本土化、特色化和差异化，将更多中国品牌和中国城市名片推广至英国及欧洲。
+        Hi! We need: 1. Smart contract engineer 2. Frontend developers 3.
+        Blockchain developers 4. UX/UI designers (experience with crypto
+        projects preferred) 5. Security experts (cryptographic protocols,
+        auditing) 6. Product & Community managers
       </div>
       <section className={styles.showcaseSection}>
         <div ref={containerRef} className={styles.imagesContainer}>

@@ -135,7 +135,7 @@ const index = () => {
               //   } as React.CSSProperties
               // }
             >
-              中国品牌海外推广
+              Partner for overseas promotion
             </p>
             <p
               id="last_display_text"
@@ -144,7 +144,7 @@ const index = () => {
               //   color: "var(--color, black)",
               // }}
             >
-              合作伙伴
+              of Chinese brands
             </p>
           </div>
           <div

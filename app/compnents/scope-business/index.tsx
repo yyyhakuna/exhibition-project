@@ -6,7 +6,7 @@ const ScopeBusiness = () => {
     <div className={styles.container + " aaaContainer"}>
       {/* 标题部分 */}
       <div className={styles.titleSection}>
-        <h2 className={styles.title}>业务范围</h2>
+        <h2 className={styles.title}>Products and Service</h2>
         <div className={styles.titleLine}></div>
       </div>
 
@@ -15,48 +15,23 @@ const ScopeBusiness = () => {
         {/* 01. 国际会展 */}
         <div className={styles.businessItem}>
           <div className={styles.itemNumber}>01.</div>
-          <h3 className={styles.itemTitle}>国际会展</h3>
-          <p className={styles.itemDescription}>全球展会一站式服务</p>
+          <h3 className={styles.itemTitle}>Education</h3>
+          <p className={styles.itemDescription}>Education</p>
         </div>
 
         {/* 02. 活动策划 */}
         <div className={styles.businessItem}>
           <div className={styles.itemNumber}>02.</div>
-          <h3 className={styles.itemTitle}>活动策划</h3>
-          <p className={styles.itemDescription}>欧洲活动营销策略</p>
+          <h3 className={styles.itemTitle}>Wine tasting and consultant</h3>
+          <p className={styles.itemDescription}>Wine tasting and consultant</p>
         </div>
 
         {/* 03. 数字营销 */}
         <div className={styles.businessItem}>
           <div className={styles.itemNumber}>03.</div>
-          <h3 className={styles.itemTitle}>数字营销</h3>
-          <p className={styles.itemDescription}>欧洲媒介传播策略</p>
+          <h3 className={styles.itemTitle}>Art Gallery</h3>
+          <p className={styles.itemDescription}>Art Gallery</p>
         </div>
-
-        {/* 04. 特色定制 */}
-        <div className={styles.businessItem}>
-          <div className={styles.itemNumber}>04.</div>
-          <h3 className={styles.itemTitle}>特色定制</h3>
-          <p className={styles.itemDescription}>欧洲出访综合服务</p>
-        </div>
-      </div>
-
-      {/* 详情按钮 */}
-      <div className={styles.detailSection}>
-        <button className={styles.detailButton}>
-          <span>阅读详情</span>
-          <div className={styles.buttonIcon}>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-                d="M7.5 15L12.5 10L7.5 5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-        </button>
       </div>
 
       {/* 案例展示部分 */}
